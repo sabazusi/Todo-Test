@@ -1,7 +1,6 @@
 name: todo-to-issue
 
-on:
-  workflow_dispatch:
+on: ["push"]
 
 jobs:
   build:
