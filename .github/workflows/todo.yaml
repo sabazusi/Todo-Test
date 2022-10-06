@@ -5,10 +5,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@master
-      - name: Create Issue
-        uses: alstr/todo-to-issue-action@v4.6.8
+      - uses: "actions/checkout@master"
+      - name: "TODO to Issue"
+        uses: "alstr/todo-to-issue-action@master"
+        id: "todo"
         with:
-          TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }} 
+          PROJECTS_SECRET: ${{ secrets.PROJECTS_SECRET }}
