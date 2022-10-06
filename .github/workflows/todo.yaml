@@ -1,0 +1,13 @@
+name: todo-to-issue
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create Issue
+        uses: alstr/todo-to-issue-action@master
+	id: todo-id
